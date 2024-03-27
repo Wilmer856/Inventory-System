@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox prefHeight="600.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.wgjavafxmlapplication.AddPartController">
+   <children>
+      <HBox prefHeight="55.0" prefWidth="440.0" spacing="40.0">
+         <children>
+            <Label text="Add Part">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="inHouseBtn" mnemonicParsing="false" onAction="#onInHouseRdClick" selected="true" text="In-House">
+               <toggleGroup>
+                  <ToggleGroup fx:id="AddPRd" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="outSourceBtn" mnemonicParsing="false" onAction="#onOutRdClick" text="Outsourced" toggleGroup="$AddPRd" />
+         </children>
+      </HBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="15.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label maxWidth="-Infinity" prefWidth="86.0" text="ID">
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="idTxt" disable="true" promptText="Auto Gen- Disabled" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label maxWidth="-Infinity" prefWidth="86.0" text="Name">
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="nameTxt" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label maxWidth="-Infinity" prefWidth="86.0" text="Inv">
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="invTxt" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label maxWidth="-Infinity" prefWidth="86.0" text="Price/Cost">
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="priceTxt" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label maxWidth="-Infinity" prefWidth="86.0" text="Max">
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="maxTxt">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label text="Min">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="minTxt" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="inOutLbl" maxWidth="-Infinity" prefWidth="86.0" text="Machine ID">
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="inOutTxt" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER_RIGHT" prefHeight="97.0" prefWidth="490.0" spacing="15.0">
+         <children>
+            <Button maxWidth="-Infinity" mnemonicParsing="false" onAction="#onSavePartBtnClick" prefWidth="52.0" text="Save" />
+            <Button mnemonicParsing="false" onAction="#onCancelPBtnClick" text="Cancel" />
+         </children>
+         <padding>
+            <Insets right="120.0" />
+         </padding>
+      </HBox>
+   </children>
+   <padding>
+      <Insets left="60.0" top="50.0" />
+   </padding>
+</VBox>
